@@ -1,0 +1,13 @@
+<p>
+  <b>User name:</b>
+  <%=h @sample.user_name %>
+</p>
+
+<p>
+  <b>Pwd:</b>
+  <%=h @sample.pwd %>
+</p>
+
+
+<%= link_to 'Edit', edit_sample_path(@sample) %> |
+<%= link_to 'Back', samples_path %>

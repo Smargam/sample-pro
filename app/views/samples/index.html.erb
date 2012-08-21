@@ -1,0 +1,22 @@
+<h1>Listing samples</h1>
+
+<table>
+  <tr>
+    <th>User name</th>
+    <th>Pwd</th>
+  </tr>
+
+<% @samples.each do |sample| %>
+  <tr>
+    <td><%=h sample.user_name %></td>
+    <td><%=h sample.pwd %></td>
+    <td><%= link_to 'Show', sample %></td>
+    <td><%= link_to 'Edit', edit_sample_path(sample) %></td>
+    <td><%= link_to 'Destroy', sample, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New sample', new_sample_path %>
